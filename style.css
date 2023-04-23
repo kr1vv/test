@@ -1,0 +1,78 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* odwołanie do elementu po nazwie jego klasy === .nazwaKlasy {} */
+/* 
+margin: odleglosc pomiedzy elementami 
+padding: margines wewnetry, odleglosc pomiedzy contentem (zawartoscia) a obramowaniem
+*/
+
+nav {
+  border: 1px solid black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav a {
+  display: inline-block;
+  text-decoration: none;
+  color: black;
+  margin-left: 20px;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  justify-content: center;
+  align-items: center;
+  margin-right: 15px;
+}
+
+.nav-logo {
+  display: flex;
+  text-decoration: none;
+  align-items: center;
+}
+
+.films {
+  display: flex;
+  justify-content: space-between;
+  width: 960px;
+  margin: 0 auto;
+  padding: 32px 0;
+}
+
+.film {
+  width: 300px;
+  padding: 32px 20px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  border-radius: 5px;
+}
+
+.film h2 {
+  font-size: 16px;
+  margin-bottom: 4px;
+}
+
+.film p {
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+.film img {
+  /* max-width: 100%; */
+  width: 100%;
+  height: 220px;
+  margin-bottom: 6px;
+}
+
+.film a {
+  text-decoration: none;
+  font-size: 12px;
+  color: black;
+}
