@@ -153,13 +153,61 @@
 
 // stwórz fukcje która przyjmie imie i wroci je w formacie: Imie
 
-const nameEdition = (userName) => {
-  const lowerCaseName = userName.toLowerCase();
-  const result = lowerCaseName[0].toUpperCase() + lowerCaseName.slice(1);
-  console.log(result);
-};
-nameEdition("rAdosŁaW");
-nameEdition("ToMAsz");
-nameEdition("KrZysZtof");
-nameEdition("jARosław");
+// const nameEdition = (userName) => {
+//   const lowerCaseName = userName.toLowerCase();
+//   const result = lowerCaseName[0].toUpperCase() + lowerCaseName.slice(1);
+//   console.log(result);
+// };
+// nameEdition("rAdosŁaW");
+// nameEdition("ToMAsz");
+// nameEdition("KrZysZtof");
+// nameEdition("jARosław");
 
+const names = ["Katarzyna", "Paulina", "Kamil", "Marta", "Magda"];
+
+const namesList = document.querySelector(".names-list");
+
+const stapi = async () => {
+  const result = await fetch("https://swapi.dev/api/people/");
+  const data = await result.json();
+  console.log(data.results);
+};
+stapi();
+
+names.forEach((name) => {
+  const li = document.createElement("li");
+  li.innerText = name;
+  li.classList.add("name");
+  // li.style.color = "red";
+  namesList.appendChild(li);
+});
+
+const gamesList = document.querySelector(".games");
+
+const games = [
+  { team1: "Barcelona", draw: "X", team2: "Atl. Madryt" },
+  { team1: "Feyenord", draw: "X", team2: "Utrecht" },
+];
+
+games.forEach((game) => {
+  const div = document.createElement("div");
+  div.classList.add("button-row");
+
+  const button1 = document.createElement("button");
+  button1.classList.add("button");
+  button1.innerText = game.team1;
+
+  const button2 = document.createElement("button");
+  button2.classList.add("button");
+  button2.innerText = game.draw;
+
+  const button3 = document.createElement("button");
+  button3.classList.add("button");
+  button3.innerText = game.team2;
+
+  div.appendChild(button1);
+  div.appendChild(button2);
+  div.appendChild(button3);
+
+  gamesList.appendChild(div);
+});

@@ -76,3 +76,37 @@ nav {
   font-size: 12px;
   color: black;
 }
+
+.names li {
+  color: red;
+}
+
+.name {
+  color: red;
+}
+
+.games {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.button-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 3px;
+}
+
+.button {
+  flex-basis: 33%;
+  text-align: left;
+  padding: 5px 14px;
+  border: none;
+  border-radius: 3px;
+  color: #ddd;
+  background-color: #001b64;
+  transition: 0.4s;
+}
+
+.button:hover {
+  background-color: goldenrod;
+}
